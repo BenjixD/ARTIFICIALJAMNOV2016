@@ -80,6 +80,12 @@ public class playerController : MonoBehaviour
             }
         }
 
+        // prevents player from sliding  the dragon
+        if (grounded && Input.GetAxis("Jump") == 0 && (!(hooked && !(Input.GetAxis("Horizontal") == 0))))
+        {
+            stayOn();
+        }
+
         // controls when player can shield
         if(Input.GetAxis("Shield") > 0 && ps.playerShield > 0)
         {
@@ -118,6 +124,8 @@ public class playerController : MonoBehaviour
         {
             Flip();
         }
+
+        
 
         // updates Bool grounded to whether the player is standing on the dragon or not
         grounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
@@ -165,6 +173,11 @@ public class playerController : MonoBehaviour
     void stickUnder()
     {
         rb.velocity = new Vector2(rb.velocity.x, jumpVelocity);
+    }
+
+    void stayOn()
+    {
+        rb.velocity = new Vector2(rb.velocity.x, -5);
     }
 
     // makes the player attack in the direction it is currently facing
