@@ -5,6 +5,7 @@ public class playerController : MonoBehaviour
 {
     Rigidbody2D rb;
     playerStats ps;
+    Animator anim;
 
     // left and right movement variables
     float move;
@@ -35,6 +36,7 @@ public class playerController : MonoBehaviour
 
     bool attacking = false;
     int attackNum = 0;
+    public float attackSpeed = 0.5f;
 
 
     void Start()
@@ -42,14 +44,18 @@ public class playerController : MonoBehaviour
         // sets Rigidbody2D rb as the rigidbody component of the gameobject this script is attached to
         rb = this.gameObject.GetComponent<Rigidbody2D>();
 
+        // sets playerStats ps as the playerStats script of the gameobject this script is attached to
         ps = this.gameObject.GetComponent<playerStats>();
+
+        // sets Animator anim as the Animator component of the gameobject this script is attached to
+        anim = this.gameObject.GetComponent<Animator>();
     }
 
 
     void Update()
     {
         // this block controls when the player can jump
-        if (canJump && !hooked && Input.GetAxis("Jump") > 0)
+        if (!attacking && canJump && !hooked && Input.GetAxis("Jump") > 0)
         {
             Jump();
         }
@@ -98,10 +104,27 @@ public class playerController : MonoBehaviour
             //Debug.Log("Shield is not active...");
         }
 
-        // controls when player can attack
-        if(Input.GetButtonDown("Attack"))
+        // controls when and how the player attacks
+        if(Input.GetButtonDown("Attack") && !attacking && grounded)
         {
-            Attack();
+            // grounded attacks
+            attacking = true;
+            anim.SetTrigger("attacking");
+            Invoke("endAttack", attackSpeed); 
+        }
+        if (Input.GetButtonDown("Attack") && !attacking && !grounded && !hooked)
+        {
+            // aerial attacks
+            attacking = true;
+            anim.SetTrigger("attacking");
+            Invoke("endAttack", attackSpeed);
+        }
+        if (Input.GetButtonDown("Attack") && !attacking && !grounded && hooked)
+        {
+            // hooked attacks
+            attacking = true;
+            anim.SetTrigger("attacking");
+            Invoke("endAttack", attackSpeed);
         }
     }
 
@@ -115,24 +138,37 @@ public class playerController : MonoBehaviour
             rb.velocity = new Vector2(move * moveSpeed, rb.velocity.y);
         }
 
-        // this block controls when the player's sprite is flipped horizontally
-        if (move < 0 && facingRight)
-        {
-            Flip();
-        }
-        else if (move > 0 && !facingRight)
-        {
-            Flip();
-        }
+        // Updates animation state parameter "move"
+        anim.SetFloat("move", Mathf.Abs(move));
 
+        // Updates animation state parameter "vSpeed"
+        anim.SetFloat("vSpeed", rb.velocity.y);
+
+        // this block controls when the player's sprite is flipped horizontally
+        if (!(!grounded && attacking))
+        {
+            if (move < 0 && facingRight)
+            {
+                Flip();
+            }
+            else if (move > 0 && !facingRight)
+            {
+                Flip();
+            }
+        }
         
 
         // updates Bool grounded to whether the player is standing on the dragon or not
         grounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
+        anim.SetBool("grounded", grounded);
 
         // updates bool hooked to whether the player is hooked on the dragon or not
         hooked = Physics2D.OverlapCircle(hookCheck.position, wallCheckRadius, whatIsWall);
+        anim.SetBool("hooked", hooked);
         underHooked = Physics2D.OverlapCircle(underHookCheck.position, wallCheckRadius, whatIsWall);
+
+        // updates bool isAttacking to whether the player is playing an attack animation or not
+        anim.SetBool("isAttacking", attacking);
     }
 
 
@@ -181,10 +217,10 @@ public class playerController : MonoBehaviour
     }
 
     // makes the player attack in the direction it is currently facing
-    void Attack()
+    void endAttack()
     {
-        attackNum++;
-        Debug.Log("Player attacked " + attackNum + " times!");
+        attacking = false;
+        
     }
 
     void notWallJump()
