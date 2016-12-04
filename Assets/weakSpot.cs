@@ -5,6 +5,7 @@ public class weakSpot : MonoBehaviour {
 
 	public int hp;				//This is my own hp
 	public Sprite deathSprite;	//this is the death sprite
+	public GameObject camera;	//this is camera
 
 	// Use this for initialization
 	void Start () {
@@ -17,7 +18,7 @@ public class weakSpot : MonoBehaviour {
 		if(hp <= 0){
 			gameObject.GetComponent<blinkPiece> ().ifBlink = false;
 			gameObject.GetComponent<SpriteRenderer> ().sprite = deathSprite;
-			gameObject.transform.parent.GetComponent<Camera_Shake> ().shakeCamera (1f, 0.1f);
+			camera.GetComponent<Camera_Shake> ().shakeCamera (1f, 0.1f);
 			gameObject.transform.parent.GetComponent<dragon> ().notifyDestroyedPoint (this);
 		}
 	}

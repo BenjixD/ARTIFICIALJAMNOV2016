@@ -102,7 +102,7 @@ public class playerController : MonoBehaviour
         }
 
         // controls when player can shield
-        if(Input.GetAxis("Shield") > 0 && ps.playerShield > 0)
+        /*if(Input.GetAxis("Shield") > 0 && ps.playerShield > 0)
         {
             ps.shieldActive = true;
             //Debug.Log("Shield is active!");
@@ -111,7 +111,7 @@ public class playerController : MonoBehaviour
         {
             ps.shieldActive = false;
             //Debug.Log("Shield is not active...");
-        }
+        }*/
 
         // controls when and how the player attacks
         if(Input.GetButtonDown("Attack") && !attacking && grounded)
