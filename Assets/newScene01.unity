@@ -466,11 +466,6 @@ GameObject:
   m_PrefabParentObject: {fileID: 1000013975286962, guid: 4330930bfd97fb048b8fdd2cab9a57fd,
     type: 2}
   m_PrefabInternal: {fileID: 1882390171}
---- !u!82 &1860553760 stripped
-AudioSource:
-  m_PrefabParentObject: {fileID: 82000010556096528, guid: 7d271b752ce790548bc9dd4405b03dc9,
-    type: 2}
-  m_PrefabInternal: {fileID: 589960281}
 --- !u!1001 &1882390171
 Prefab:
   m_ObjectHideFlags: 0
@@ -520,15 +515,6 @@ Prefab:
       propertyPath: reference
       value: 
       objectReference: {fileID: 493328562}
-    - target: {fileID: 4000011581191190, guid: 4330930bfd97fb048b8fdd2cab9a57fd, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000013738601120, guid: 4330930bfd97fb048b8fdd2cab9a57fd,
-        type: 2}
-      propertyPath: source
-      value: 
-      objectReference: {fileID: 1860553760}
     - target: {fileID: 114000013738601120, guid: 4330930bfd97fb048b8fdd2cab9a57fd,
         type: 2}
       propertyPath: soundController
