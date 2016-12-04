@@ -606,6 +606,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 10
+  ifOn: 1
   jumpVelocity: 10
   offWallVelocity: 10
   wallJumpDuration: 0.1
