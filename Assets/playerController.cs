@@ -126,6 +126,12 @@ public class playerController : MonoBehaviour
             anim.SetTrigger("attacking");
             Invoke("endAttack", attackSpeed);
         }
+        if (Input.GetButtonDown("AttackDown") && !attacking && grounded)
+        {
+            attacking = true;
+            anim.SetTrigger("attackingDown");
+            Invoke("endAttack", attackSpeed);
+        }
     }
 
 
