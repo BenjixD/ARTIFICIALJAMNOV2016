@@ -70,4 +70,50 @@ public class dragonPath : MonoBehaviour {
 			rotSpeed = speed;
 		}
 	}
+
+	//DESTROY SECTION!!
+	public void killSection(){
+		//Stop all Scripts
+		MonoBehaviour[] scripts = gameObject.GetComponents<MonoBehaviour>();
+		foreach(MonoBehaviour script in scripts)
+		{
+			script.enabled = false;
+		}
+
+		//Freeze section
+		gameObject.GetComponent<Rigidbody2D> ().velocity = Vector2.zero;
+
+		//Rotate piece randomly
+		Quaternion rot = Quaternion.Euler(0, 0, transform.rotation.eulerAngles.y + Random.Range(-30, 30));
+		transform.rotation = rot;
+
+		//Explosion for 3 seconds!
+		StartCoroutine(explosion(transform.position));
+		StartCoroutine ("dropPieces");
+	}
+
+	IEnumerator explosion(Vector2 pos){
+		float interval = 0.1f;
+		for (float i = 3f; i >= 0f; i -= interval) {
+			float ifDo = Random.Range (1f, 100f);
+			if (ifDo <= 15) {
+				Vector2 setExplosion = new Vector2 (pos.x + Random.Range (-0.5f, 0.5f), pos.y + Random.Range (-0.5f, 0.5f));
+				Debug.Log ("Explosion at: " + setExplosion);
+			}
+			yield return new WaitForSeconds(interval);
+		}
+
+		yield return null;
+	}
+
+	IEnumerator dropPieces(){
+		Rigidbody2D rb = GetComponent<Rigidbody2D> ();
+		yield return new WaitForSeconds (2.5f);
+
+		rb.isKinematic = false;
+		rb.gravityScale = 2;
+		rb.velocity = (new Vector2(Random.Range(-3f,3f),Random.Range(5f,30f)));
+
+		yield return null;
+	}
 }
