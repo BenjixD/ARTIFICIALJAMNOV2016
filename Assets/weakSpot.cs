@@ -15,6 +15,7 @@ public class weakSpot : MonoBehaviour {
 	void FixedUpdate () {
 		//Check if the scale is dead
 		if(hp <= 0){
+			gameObject.GetComponent<blinkPiece> ().ifBlink = false;
 			gameObject.GetComponent<SpriteRenderer> ().sprite = deathSprite;
 			gameObject.transform.parent.GetComponent<Camera_Shake> ().shakeCamera (1f, 0.1f);
 			gameObject.transform.parent.GetComponent<dragon> ().notifyDestroyedPoint (this);
@@ -22,7 +23,7 @@ public class weakSpot : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D other){
-		if (other.CompareTag ("THIS TAG NEEDS TO BE CHANGED TO WEAPON")) {
+		if (LayerMask.LayerToName(other.gameObject.layer) == "Weapon") {
 			//----Call Invincibility Frame and take damage----//
 			hp--;
 		}

@@ -1,12 +1,14 @@
 fileFormatVersion: 2
 guid: 050e31934775066488f25950080c0ae1
-timeCreated: 1480784389
+timeCreated: 1480884972
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
     21300000: bodysprite_0
     21300002: bodysprite_1
     21300004: bodysprite_2
+    21300006: bodysprite_3
+    21300008: bodysprite_4
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -87,6 +89,32 @@ TextureImporter:
         serializedVersion: 2
         x: 260
         y: 260
+        width: 130
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bodysprite_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 130
+        width: 130
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bodysprite_4
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 130
         width: 130
         height: 130
       alignment: 0

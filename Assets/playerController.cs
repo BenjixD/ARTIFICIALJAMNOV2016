@@ -12,6 +12,9 @@ public class playerController : MonoBehaviour
     public float moveSpeed = 10f;
     bool facingRight = true;
 
+	//Turn on grounded and side checks
+	public bool ifOn = true;
+
     // jumping variables
     public float jumpVelocity = 10f;
     public float offWallVelocity = 10f;
@@ -163,18 +166,19 @@ public class playerController : MonoBehaviour
             }
         }
         
+		if (ifOn) {
+			// updates Bool grounded to whether the player is standing on the dragon or not
+			grounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
+			anim.SetBool("grounded", grounded);
 
-        // updates Bool grounded to whether the player is standing on the dragon or not
-        grounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
-        anim.SetBool("grounded", grounded);
+			// updates bool hooked to whether the player is hooked on the dragon or not
+			hooked = Physics2D.OverlapCircle(hookCheck.position, wallCheckRadius, whatIsWall);
+			anim.SetBool("hooked", hooked);
+			underHooked = Physics2D.OverlapCircle(underHookCheck.position, wallCheckRadius, whatIsWall);
 
-        // updates bool hooked to whether the player is hooked on the dragon or not
-        hooked = Physics2D.OverlapCircle(hookCheck.position, wallCheckRadius, whatIsWall);
-        anim.SetBool("hooked", hooked);
-        underHooked = Physics2D.OverlapCircle(underHookCheck.position, wallCheckRadius, whatIsWall);
-
-        // updates bool isAttacking to whether the player is playing an attack animation or not
-        anim.SetBool("isAttacking", attacking);
+			// updates bool isAttacking to whether the player is playing an attack animation or not
+			anim.SetBool("isAttacking", attacking);
+		}
     }
 
 

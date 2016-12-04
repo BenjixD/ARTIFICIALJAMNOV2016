@@ -1,11 +1,13 @@
 fileFormatVersion: 2
 guid: dbbc15e068d52c647ae10743df076862
-timeCreated: 1480831942
+timeCreated: 1480884544
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
     21300000: dragonsprite_0
     21300002: dragonsprite_1
+    21300004: dragonsprite_2
+    21300006: dragonsprite_3
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -73,6 +75,32 @@ TextureImporter:
         serializedVersion: 2
         x: 360
         y: 950
+        width: 360
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: dragonsprite_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 700
+        width: 360
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: dragonsprite_3
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 700
         width: 360
         height: 250
       alignment: 0

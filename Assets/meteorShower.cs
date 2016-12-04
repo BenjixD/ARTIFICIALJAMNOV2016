@@ -38,12 +38,15 @@ public class meteorShower : MonoBehaviour {
 			//Velocity of meteor
 			float angle = -1*(Vector2.Angle(((Vector2)player.transform.position - spawnPoint), Vector2.right) + Random.Range(lowerbound_angle*Mathf.Deg2Rad, upperbound_angle*Mathf.Deg2Rad))*Mathf.Deg2Rad;
 			Vector2 meteorVelocity = new Vector2(Mathf.Cos(angle), Mathf.Sin(angle)) * Random.Range(lowerbound_mag, upperboud_mag); 
+			//Rotation
+			float rotateAngle = -1*Vector2.Angle (Vector2.right, meteorVelocity) - 135 - 90;	//135 is the base rotation
 			//---Just for fun---//
 			//float torque = 100000f;
 
 			//Spawn Object and give it velocity and (torque)
 			GameObject spawn = (GameObject)Instantiate(meteor, spawnPoint, Quaternion.identity);
 			spawn.GetComponent<Rigidbody2D>().velocity = meteorVelocity;
+			spawn.transform.rotation = Quaternion.Euler (0, 0, rotateAngle);
 			//spawn.GetComponent<Rigidbody2D>().AddTorque(torque);
 		}
 	}

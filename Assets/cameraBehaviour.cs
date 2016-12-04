@@ -73,7 +73,6 @@ public class cameraBehaviour : MonoBehaviour {
 			transform.position = Vector3.SmoothDamp(transform.position, 
 				new Vector3(lastNotableChange.x, lastNotableChange.y - viewMargin, transform.position.z),ref refVelocity, cameraSpeedModifier);
 		}
-		Debug.Log (cameraSpeedModifier);
 	}
 
 	/*
