@@ -24,8 +24,9 @@ GameObject:
   - 124: {fileID: 124000011885409366}
   - 81: {fileID: 81000010134955184}
   - 114: {fileID: 114000011174957402}
-  - 50: {fileID: 50000014142669348}
-  m_Layer: 0
+  - 114: {fileID: 114000013361813320}
+  - 114: {fileID: 114000012304656760}
+  m_Layer: 10
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -39,7 +40,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012119678800}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.12, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -79,23 +80,6 @@ Camera:
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
   m_StereoMirrorMode: 0
---- !u!50 &50000014142669348
-Rigidbody2D:
-  serializedVersion: 2
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000012119678800}
-  m_UseAutoMass: 0
-  m_Mass: 0.0001
-  m_LinearDrag: 0
-  m_AngularDrag: 0
-  m_GravityScale: 0
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 4
 --- !u!81 &81000010134955184
 AudioListener:
   m_ObjectHideFlags: 1
@@ -123,8 +107,45 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   refObj: {fileID: 0}
   colliderMargin: 0.5
-  cameraSpeedModifier: 4
-  boundaries: -2
+  cameraSpeedModifier: 0.2
+  boundaries: 2
+  viewMargin: 0.5
+--- !u!114 &114000012304656760
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012119678800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9df14f6fac0d3e24cbecba5d46650ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 0}
+  spawningProbability: 2
+  ifOn: 1
+  margin_left: 0.5
+  margin_right: 0.5
+  margin_height: 0.5
+  lowerbound_mag: 2
+  upperboud_mag: 4
+  lowerbound_angle: 30
+  upperbound_angle: 30
+  player: {fileID: 0}
+  meteor: {fileID: 1000013402029444, guid: 98d3e581e35e9644d989af14f453bdc7, type: 2}
+--- !u!114 &114000013361813320
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012119678800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14e4ce46a35ce8a4087d9e236d00f0aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boundaries: -5
+  colliderMargin: 2
 --- !u!124 &124000011885409366
 Behaviour:
   m_ObjectHideFlags: 1

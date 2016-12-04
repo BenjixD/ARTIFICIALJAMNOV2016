@@ -3,7 +3,7 @@ using System.Collections;
 
 public class meteorShower : MonoBehaviour {
 
-	public Camera cam;
+
 	public float spawningProbability;
 	public bool ifOn = false;
 	//Spawn Boundaries
@@ -18,6 +18,8 @@ public class meteorShower : MonoBehaviour {
 	public float upperbound_angle;
 	public GameObject player;
 	public GameObject meteor;
+
+	private Camera cam;
 
 	// Use this for initialization
 	void Start () {
