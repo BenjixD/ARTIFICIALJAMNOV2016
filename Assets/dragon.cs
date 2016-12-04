@@ -6,6 +6,7 @@ public class dragon : MonoBehaviour {
 	public int hp;					//Hp of the dragon
 	private weakSpot[] children;	//List of WeakSpots
 	private bool dying = false;		//This is just so that we dont call death twice
+	public GameObject sound;		//Soundcontroller
 
 	// Use this for initialization
 	void Start () {
@@ -19,11 +20,13 @@ public class dragon : MonoBehaviour {
 		if (hp == 0 && !dying) {
 			dying = true;
 			dragonDeath();
+			sound.GetComponent<soundEffectScript> ().playDragonDeath();
 		}
 
 		if (Input.GetKeyDown ("q") && !dying) {
 			dying = true;
 			dragonDeath();
+			sound.GetComponent<soundEffectScript> ().playDragonDeath();
 		}
 	}
 
@@ -32,6 +35,7 @@ public class dragon : MonoBehaviour {
 			if (children [i] == ws) {
 				Destroy (ws);
 				hp--;
+				sound.GetComponent<soundEffectScript> ().playDragonRoar();
 				break;
 			}
 		}

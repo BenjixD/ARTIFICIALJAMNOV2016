@@ -20,10 +20,11 @@ public class Camera_Shake : MonoBehaviour
         }
     }
 
+	/*
     void OnEnable()
     {
         originalPos = camTransform.localPosition;
-    }
+    }*/
 
 
 	//Call this to shake 
@@ -37,14 +38,13 @@ public class Camera_Shake : MonoBehaviour
     {
         if (shakeDuration > 0)
         {
-            camTransform.localPosition = originalPos + Random.insideUnitSphere * shakeAmount;
-
+			camTransform.localPosition = camTransform.localPosition + Random.insideUnitSphere * shakeAmount;
             shakeDuration -= Time.deltaTime * decreaseFactor;
         }
         else
         {
             shakeDuration = 0f;
-            camTransform.localPosition = originalPos;
+            //camTransform.localPosition = originalPos;
         }
     }
 }

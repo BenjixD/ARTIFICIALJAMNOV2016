@@ -18,7 +18,7 @@ public class weakSpot : MonoBehaviour {
 		if(hp <= 0){
 			gameObject.GetComponent<blinkPiece> ().ifBlink = false;
 			gameObject.GetComponent<SpriteRenderer> ().sprite = deathSprite;
-			camera.GetComponent<Camera_Shake> ().shakeCamera (1f, 0.1f);
+			camera.GetComponent<Camera_Shake> ().shakeCamera (1f, 0.3f);
 			gameObject.transform.parent.GetComponent<dragon> ().notifyDestroyedPoint (this);
 		}
 	}
