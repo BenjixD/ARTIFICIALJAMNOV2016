@@ -1,7 +1,7 @@
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2008
-
-Project("{7E0EC4AE-44AB-585A-C6D9-1ED2140932E4}") = "ArtificialJamNov2016", "Assembly-CSharp.csproj", "{EDF9BF90-A249-E94C-42E5-8B66101A0FE7}"
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2015
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArtificialJamNov2016.CSharp", "ArtificialJamNov2016.CSharp.csproj", "{D4A41E75-7145-6919-0A28-C98F97023AD7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,15 +9,12 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{EDF9BF90-A249-E94C-42E5-8B66101A0FE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EDF9BF90-A249-E94C-42E5-8B66101A0FE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EDF9BF90-A249-E94C-42E5-8B66101A0FE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EDF9BF90-A249-E94C-42E5-8B66101A0FE7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4A41E75-7145-6919-0A28-C98F97023AD7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4A41E75-7145-6919-0A28-C98F97023AD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4A41E75-7145-6919-0A28-C98F97023AD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4A41E75-7145-6919-0A28-C98F97023AD7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = Assembly-CSharp.csproj
 	EndGlobalSection
 EndGlobal
