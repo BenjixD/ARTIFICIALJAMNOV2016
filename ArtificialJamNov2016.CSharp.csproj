@@ -70,6 +70,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\BenWork\Camera_Shake.cs" />
+    <Compile Include="Assets\PlayerMeteor.cs" />
+    <Compile Include="Assets\blinkBody.cs" />
+    <Compile Include="Assets\blinkPiece.cs" />
+    <Compile Include="Assets\bobble.cs" />
     <Compile Include="Assets\cameraBehaviour.cs" />
     <Compile Include="Assets\dragon.cs" />
     <Compile Include="Assets\dragonPath.cs" />
@@ -82,6 +86,7 @@
     <Compile Include="Assets\playerFalling.cs" />
     <Compile Include="Assets\playerStats.cs" />
     <Compile Include="Assets\soundEffectScript.cs" />
+    <Compile Include="Assets\spawnCloud.cs" />
     <Compile Include="Assets\testDeath.cs" />
     <Compile Include="Assets\testDragon.cs" />
     <Compile Include="Assets\weakSpot.cs" />
