@@ -1686,7 +1686,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68c5beb586df320439b0c0e4fba4c6ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 0
+  hp: 1
   deathSprite: {fileID: 21300004, guid: 050e31934775066488f25950080c0ae1, type: 3}
 --- !u!114 &114000011897432812
 MonoBehaviour:
