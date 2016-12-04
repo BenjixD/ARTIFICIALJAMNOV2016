@@ -24,8 +24,8 @@ public class moveDragon : dragonPath {
 			rb.velocity = gameObj.GetComponent<Rigidbody2D>().velocity;
 		} 
 		else {
-			if (Mathf.Abs(transform.position.x - reference.prevMoves [0].position.x) <= 0.025 &&
-				Mathf.Abs(transform.position.y - reference.prevMoves [0].position.y) <= 0.025) {
+			if (Mathf.Abs(transform.position.x - reference.prevMoves [0].position.x) <= 0.020 &&
+				Mathf.Abs(transform.position.y - reference.prevMoves [0].position.y) <= 0.020) {
 				//Update the change in direction and rotation
 				transform.position = reference.prevMoves[0].position;
 				rb.velocity = reference.prevMoves[0].direction * reference.GetComponent<Rigidbody2D> ().velocity.magnitude;

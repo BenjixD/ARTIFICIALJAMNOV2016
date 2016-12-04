@@ -7,6 +7,7 @@ public class cameraBehaviour : MonoBehaviour {
 	public float colliderMargin = 2f; //This is collider offset from camera view
 	public float cameraSpeedModifier = 2f; //Camera Speed
 	public float boundaries = 1f; //boundaries
+	public float viewMargin = 1f; //See see more below the character
 
 	private Camera camera;
 	private Vector2 cameraPos;
@@ -17,7 +18,8 @@ public class cameraBehaviour : MonoBehaviour {
 	private BoxCollider2D limitColliderBottom;	//Outer Bottom collider (set to camera view size)
 	private BoxCollider2D limitColliderLeft;	//Outer Left collider (set to camera view size)
 
-	private GameObject margin;	//Margin for camera moving
+	//private GameObject margin;	//Margin for camera moving
+	private Vector2 lastNotableChange;	//Last notable change
 
 	private bool moveCamera = true;
 	// Use this for initialization
@@ -27,17 +29,19 @@ public class cameraBehaviour : MonoBehaviour {
 		cameraPos = transform.position;
 		cameraSize.x = Vector2.Distance (camera.ScreenToWorldPoint(new Vector2(0,0)),camera.ScreenToWorldPoint(new Vector2(camera.pixelWidth, 0))) - boundaries;
 		cameraSize.y = Vector2.Distance (camera.ScreenToWorldPoint(new Vector2(0,0)),camera.ScreenToWorldPoint(new Vector2(0, camera.pixelHeight))) - boundaries;
-		Debug.Log (cameraSize);
-	
 
 		//Init colliders
 		limitColliderTop = gameObject.AddComponent<BoxCollider2D>();
+		limitColliderTop.isTrigger = true;
 		limitColliderRight = gameObject.AddComponent<BoxCollider2D>();
+		limitColliderRight.isTrigger = true;
 		limitColliderBottom = gameObject.AddComponent<BoxCollider2D>();
+		limitColliderBottom.isTrigger = true;
 		limitColliderLeft = gameObject.AddComponent<BoxCollider2D>();
+		limitColliderLeft.isTrigger = true;
 
-		margin = new GameObject("margin");
-		margin.transform.parent = gameObject.transform;  
+		//margin = new GameObject("margin");
+		//margin.transform.parent = gameObject.transform;  
 
 
 		//Set the collider positions
@@ -53,18 +57,23 @@ public class cameraBehaviour : MonoBehaviour {
 		limitColliderLeft.offset = new Vector2(-1 * cameraSize.x * 0.5f - colliderMargin * 0.5f, 0) + cameraPos;
 		limitColliderLeft.size = new Vector2 (colliderMargin, cameraSize.y);
 
-		BoxCollider2D marginCollider = margin.gameObject.AddComponent<BoxCollider2D>();
-		marginCollider.isTrigger = true;
-		marginCollider.size = new Vector2 (cameraSize.x * 0.5f, cameraSize.y * 0.5f);
+		//BoxCollider2D marginCollider = margin.gameObject.AddComponent<BoxCollider2D>();
+		//marginCollider.isTrigger = true;
+		//marginCollider.size = new Vector2 (cameraSize.x * 0.5f, cameraSize.y * 0.5f);
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
 		if (moveCamera) {
-			Vector3 refVelocity = refObj.transform.position - transform.position;
-			//GetComponent<Rigidbody2D>().velocity = new Vector2(refVelocity.x * cameraSpeed, refVelocity.y * cameraSpeed);  
-			GetComponent<Rigidbody2D>().velocity = refVelocity * cameraSpeedModifier;
+			if (Mathf.Abs (lastNotableChange.x - refObj.transform.position.x) > 1 ||
+			   Mathf.Abs (lastNotableChange.y - refObj.transform.position.y) > 1) {
+				lastNotableChange = refObj.transform.position;
+			}
+			Vector3 refVelocity = Vector3.zero;
+			transform.position = Vector3.SmoothDamp(transform.position, 
+				new Vector3(lastNotableChange.x, lastNotableChange.y - viewMargin, transform.position.z),ref refVelocity, cameraSpeedModifier);
 		}
+		Debug.Log (cameraSpeedModifier);
 	}
 
 	/*
@@ -73,12 +82,10 @@ public class cameraBehaviour : MonoBehaviour {
 		if (reference == refObj) {
 			moveCamera = true;
 		}
-		Debug.Log ("Not Colliding");
 	}
 
 
 	void OnTriggerStay2D(Collider2D col){
 		moveCamera = false;
-		Debug.Log ("Colliding");
 	}*/
 }

@@ -36,7 +36,7 @@ public class meteorShower : MonoBehaviour {
 			//Spawn Point of the meteor
 			Vector2 spawnPoint = new Vector2 (Random.Range(left, right), Random.Range(lowerHeight, upperHeight));
 			//Velocity of meteor
-			float angle = -1*(Vector2.Angle(((Vector2)player.transform.position - spawnPoint), Vector2.right) + Random.Range(lowerbound_angle, upperbound_angle))*Mathf.Deg2Rad;
+			float angle = -1*(Vector2.Angle(((Vector2)player.transform.position - spawnPoint), Vector2.right) + Random.Range(lowerbound_angle*Mathf.Deg2Rad, upperbound_angle*Mathf.Deg2Rad))*Mathf.Deg2Rad;
 			Vector2 meteorVelocity = new Vector2(Mathf.Cos(angle), Mathf.Sin(angle)) * Random.Range(lowerbound_mag, upperboud_mag); 
 			//---Just for fun---//
 			//float torque = 100000f;
