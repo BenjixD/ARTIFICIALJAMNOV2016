@@ -5,7 +5,7 @@ AnimationClip:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: player_AttackGrounded
+  m_Name: player_AttackDown
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,11 +20,21 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - time: 0
+        value: 0
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 31
+      - time: 0.21666667
         value: 1
         inSlope: Infinity
         outSlope: Infinity
         tangentMode: 31
-      - time: 0.1
+      - time: 0.41666666
+        value: 1
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 31
+      - time: 0.5
         value: 0
         inSlope: Infinity
         outSlope: Infinity
@@ -33,50 +43,25 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_IsActive
-    path: Sword Hitbox/hitbox
-    classID: 1
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - time: 0
-        value: 0
-        inSlope: Infinity
-        outSlope: Infinity
-        tangentMode: 31
-      - time: 0.1
-        value: 1
-        inSlope: Infinity
-        outSlope: Infinity
-        tangentMode: 31
-      - time: 0.25
-        value: 0
-        inSlope: Infinity
-        outSlope: Infinity
-        tangentMode: 31
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_IsActive
-    path: Sword Hitbox/hitbox (1)
+    path: Sword Hitbox/hitbox (6)
     classID: 1
     script: {fileID: 0}
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 21300022, guid: ece604a148fd0994398668f9e8ddf5d6, type: 3}
-    - time: 0.05
-      value: {fileID: 21300024, guid: ece604a148fd0994398668f9e8ddf5d6, type: 3}
+      value: {fileID: 21300070, guid: ece604a148fd0994398668f9e8ddf5d6, type: 3}
+    - time: 0.033333335
+      value: {fileID: 21300072, guid: ece604a148fd0994398668f9e8ddf5d6, type: 3}
+    - time: 0.06666667
+      value: {fileID: 21300074, guid: ece604a148fd0994398668f9e8ddf5d6, type: 3}
     - time: 0.1
-      value: {fileID: 21300026, guid: ece604a148fd0994398668f9e8ddf5d6, type: 3}
-    - time: 0.15
-      value: {fileID: 21300028, guid: ece604a148fd0994398668f9e8ddf5d6, type: 3}
-    - time: 0.2
-      value: {fileID: 21300028, guid: ece604a148fd0994398668f9e8ddf5d6, type: 3}
+      value: {fileID: 21300076, guid: ece604a148fd0994398668f9e8ddf5d6, type: 3}
+    - time: 0.21666667
+      value: {fileID: 21300078, guid: ece604a148fd0994398668f9e8ddf5d6, type: 3}
     - time: 0.25
-      value: {fileID: 21300032, guid: ece604a148fd0994398668f9e8ddf5d6, type: 3}
+      value: {fileID: 21300080, guid: ece604a148fd0994398668f9e8ddf5d6, type: 3}
     - time: 0.5
-      value: {fileID: 21300032, guid: ece604a148fd0994398668f9e8ddf5d6, type: 3}
+      value: {fileID: 21300080, guid: ece604a148fd0994398668f9e8ddf5d6, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -88,13 +73,7 @@ AnimationClip:
     m_Extent: {x: 0, y: 0, z: 0}
   m_ClipBindingConstant:
     genericBindings:
-    - path: 2296643231
-      attribute: 2086281974
-      script: {fileID: 0}
-      classID: 1
-      customType: 0
-      isPPtrCurve: 0
-    - path: 4287560881
+    - path: 2966383222
       attribute: 2086281974
       script: {fileID: 0}
       classID: 1
@@ -107,13 +86,13 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 21300022, guid: ece604a148fd0994398668f9e8ddf5d6, type: 3}
-    - {fileID: 21300024, guid: ece604a148fd0994398668f9e8ddf5d6, type: 3}
-    - {fileID: 21300026, guid: ece604a148fd0994398668f9e8ddf5d6, type: 3}
-    - {fileID: 21300028, guid: ece604a148fd0994398668f9e8ddf5d6, type: 3}
-    - {fileID: 21300028, guid: ece604a148fd0994398668f9e8ddf5d6, type: 3}
-    - {fileID: 21300032, guid: ece604a148fd0994398668f9e8ddf5d6, type: 3}
-    - {fileID: 21300032, guid: ece604a148fd0994398668f9e8ddf5d6, type: 3}
+    - {fileID: 21300070, guid: ece604a148fd0994398668f9e8ddf5d6, type: 3}
+    - {fileID: 21300072, guid: ece604a148fd0994398668f9e8ddf5d6, type: 3}
+    - {fileID: 21300074, guid: ece604a148fd0994398668f9e8ddf5d6, type: 3}
+    - {fileID: 21300076, guid: ece604a148fd0994398668f9e8ddf5d6, type: 3}
+    - {fileID: 21300078, guid: ece604a148fd0994398668f9e8ddf5d6, type: 3}
+    - {fileID: 21300080, guid: ece604a148fd0994398668f9e8ddf5d6, type: 3}
+    - {fileID: 21300080, guid: ece604a148fd0994398668f9e8ddf5d6, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
@@ -139,11 +118,21 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - time: 0
+        value: 0
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 31
+      - time: 0.21666667
         value: 1
         inSlope: Infinity
         outSlope: Infinity
         tangentMode: 31
-      - time: 0.1
+      - time: 0.41666666
+        value: 1
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 31
+      - time: 0.5
         value: 0
         inSlope: Infinity
         outSlope: Infinity
@@ -152,32 +141,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_IsActive
-    path: Sword Hitbox/hitbox
-    classID: 1
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - time: 0
-        value: 0
-        inSlope: Infinity
-        outSlope: Infinity
-        tangentMode: 31
-      - time: 0.1
-        value: 1
-        inSlope: Infinity
-        outSlope: Infinity
-        tangentMode: 31
-      - time: 0.25
-        value: 0
-        inSlope: Infinity
-        outSlope: Infinity
-        tangentMode: 31
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_IsActive
-    path: Sword Hitbox/hitbox (1)
+    path: Sword Hitbox/hitbox (6)
     classID: 1
     script: {fileID: 0}
   m_EulerEditorCurves: []
