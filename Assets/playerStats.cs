@@ -39,11 +39,6 @@ public class playerStats : MonoBehaviour {
             }
         }
 
-        if (playerLife == 0)
-        {
-
-        }
-
         if(Input.GetKeyDown("h"))
         {
             playerTakeDamage();
@@ -57,11 +52,29 @@ public class playerStats : MonoBehaviour {
 
     public void playerTakeDamage()
     {
-        if (playerLife > 0 && canTakeDamage)
+        if (playerLife > 1 && canTakeDamage)
         {
             playerLife -= 1;
             StartCoroutine(playerInvul(numberOfFlicker, timeOnFlicker, timeOffFlicker));
         }
+        else if (playerLife == 1 && canTakeDamage)
+        {
+            canTakeDamage = false;
+            StartCoroutine(killPlayer(4f));
+        }
+    }
+
+    IEnumerator killPlayer(float time)
+    {
+        Vector3 scale = this.gameObject.GetComponent<Transform>().localScale;
+        scale.y *= -1;
+        this.gameObject.GetComponent<Transform>().localScale = scale;
+        this.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 5);
+        this.gameObject.GetComponent<CircleCollider2D>().enabled = false;
+        this.gameObject.GetComponent<BoxCollider2D>().enabled = false;
+        this.gameObject.GetComponent<playerController>().enabled = false;
+        yield return new WaitForSeconds(time);
+        Destroy(this.gameObject);
     }
 
     IEnumerator playerInvul(int nTimes, float timeOn, float timeOff)
