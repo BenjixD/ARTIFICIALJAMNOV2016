@@ -1,0 +1,633 @@
+fileFormatVersion: 2
+guid: ece604a148fd0994398668f9e8ddf5d6
+timeCreated: 1480814511
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: characterspritesheet_0
+    21300002: characterspritesheet_1
+    21300004: characterspritesheet_2
+    21300006: characterspritesheet_3
+    21300008: characterspritesheet_4
+    21300010: characterspritesheet_5
+    21300012: characterspritesheet_6
+    21300014: characterspritesheet_7
+    21300016: characterspritesheet_8
+    21300018: characterspritesheet_9
+    21300020: characterspritesheet_10
+    21300022: characterspritesheet_11
+    21300024: characterspritesheet_12
+    21300026: characterspritesheet_13
+    21300028: characterspritesheet_14
+    21300030: characterspritesheet_15
+    21300032: characterspritesheet_16
+    21300034: characterspritesheet_17
+    21300036: characterspritesheet_18
+    21300038: characterspritesheet_19
+    21300040: characterspritesheet_20
+    21300042: characterspritesheet_21
+    21300044: characterspritesheet_22
+    21300046: characterspritesheet_23
+    21300048: characterspritesheet_24
+    21300050: characterspritesheet_25
+    21300052: characterspritesheet_26
+    21300054: characterspritesheet_27
+    21300056: characterspritesheet_28
+    21300058: characterspritesheet_29
+    21300060: characterspritesheet_30
+    21300062: characterspritesheet_31
+    21300064: characterspritesheet_32
+    21300066: characterspritesheet_33
+    21300068: characterspritesheet_34
+    21300070: characterspritesheet_35
+    21300072: characterspritesheet_36
+    21300074: characterspritesheet_37
+    21300076: characterspritesheet_38
+    21300078: characterspritesheet_39
+    21300080: characterspritesheet_40
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: characterspritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1085
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: characterspritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 1085
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: characterspritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 1085
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: characterspritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 935
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: characterspritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 935
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: characterspritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 935
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: characterspritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 935
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: characterspritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 935
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: characterspritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 785
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: characterspritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 785
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: characterspritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 785
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: characterspritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 635
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: characterspritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 635
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: characterspritesheet_13
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 635
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: characterspritesheet_14
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 635
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: characterspritesheet_15
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 635
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: characterspritesheet_16
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 635
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: characterspritesheet_17
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 485
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: characterspritesheet_18
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 485
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: characterspritesheet_19
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 485
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: characterspritesheet_20
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 485
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: characterspritesheet_21
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 485
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: characterspritesheet_22
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 485
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: characterspritesheet_23
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 335
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: characterspritesheet_24
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 335
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: characterspritesheet_25
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 335
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: characterspritesheet_26
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 335
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: characterspritesheet_27
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 335
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: characterspritesheet_28
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 335
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: characterspritesheet_29
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 185
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: characterspritesheet_30
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 185
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: characterspritesheet_31
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 185
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: characterspritesheet_32
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 185
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: characterspritesheet_33
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 185
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: characterspritesheet_34
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 185
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: characterspritesheet_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 35
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: characterspritesheet_36
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 35
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: characterspritesheet_37
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 35
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: characterspritesheet_38
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 35
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: characterspritesheet_39
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 35
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: characterspritesheet_40
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 35
+        width: 150
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
