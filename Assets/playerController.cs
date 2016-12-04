@@ -5,7 +5,10 @@ public class playerController : MonoBehaviour
 {
     Rigidbody2D rb;
     playerStats ps;
+    soundEffectScript fx;
     Animator anim;
+
+    public GameObject soundController;
 
     // left and right movement variables
     float move;
@@ -40,7 +43,10 @@ public class playerController : MonoBehaviour
 
 
     void Start()
-    {
+    { 
+        // sets reference to soundEffectScript
+        fx = soundController.GetComponent<soundEffectScript>();
+
         // sets Rigidbody2D rb as the rigidbody component of the gameobject this script is attached to
         rb = this.gameObject.GetComponent<Rigidbody2D>();
 
@@ -108,6 +114,7 @@ public class playerController : MonoBehaviour
         if(Input.GetButtonDown("Attack") && !attacking && grounded)
         {
             // grounded attacks
+            fx.playSwordSwing();
             attacking = true;
             anim.SetTrigger("attacking");
             Invoke("endAttack", attackSpeed); 
@@ -115,6 +122,7 @@ public class playerController : MonoBehaviour
         if (Input.GetButtonDown("Attack") && !attacking && !grounded && !hooked)
         {
             // aerial attacks
+            fx.playSwordSwing();
             attacking = true;
             anim.SetTrigger("attacking");
             Invoke("endAttack", attackSpeed);
@@ -122,12 +130,15 @@ public class playerController : MonoBehaviour
         if (Input.GetButtonDown("Attack") && !attacking && !grounded && hooked)
         {
             // hooked attacks
+            fx.playSwordSwing();
             attacking = true;
             anim.SetTrigger("attacking");
             Invoke("endAttack", attackSpeed);
         }
         if (Input.GetButtonDown("AttackDown") && !attacking && grounded)
         {
+            // downward attacks
+            fx.playSwordSwing();
             attacking = true;
             anim.SetTrigger("attackingDown");
             Invoke("endAttack", attackSpeed);
@@ -193,6 +204,10 @@ public class playerController : MonoBehaviour
     {
         rb.velocity = new Vector2(rb.velocity.x, jumpVelocity);
         canJump = false;
+        if(!grounded)
+        {
+            fx.playJumpSound();
+        }
 
     }
 
@@ -202,10 +217,12 @@ public class playerController : MonoBehaviour
         inWallJump = true;
         if (hooked && !facingRight)
         {
+            fx.playJumpSound();
             rb.velocity = new Vector2(offWallVelocity, jumpVelocity);
         }
         else if (hooked && facingRight)
         {
+            fx.playJumpSound();
             rb.velocity = new Vector2(-1 * offWallVelocity, jumpVelocity);
         }
         Invoke("notWallJump", wallJumpDuration);

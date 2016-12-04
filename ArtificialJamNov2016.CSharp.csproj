@@ -73,10 +73,15 @@
     <Compile Include="Assets\cameraBehaviour.cs" />
     <Compile Include="Assets\dragon.cs" />
     <Compile Include="Assets\dragonPath.cs" />
+    <Compile Include="Assets\fallBoundaries.cs" />
+    <Compile Include="Assets\meteor.cs" />
     <Compile Include="Assets\meteorShower.cs" />
+    <Compile Include="Assets\meteorSoundScript.cs" />
     <Compile Include="Assets\moveDragon.cs" />
     <Compile Include="Assets\playerController.cs" />
+    <Compile Include="Assets\playerFalling.cs" />
     <Compile Include="Assets\playerStats.cs" />
+    <Compile Include="Assets\soundEffectScript.cs" />
     <Compile Include="Assets\testDeath.cs" />
     <Compile Include="Assets\testDragon.cs" />
     <Compile Include="Assets\weakSpot.cs" />
