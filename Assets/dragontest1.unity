@@ -100,21 +100,6 @@ GameObject:
   m_PrefabParentObject: {fileID: 1000012119678800, guid: 4e21a4565bd959a49b2281ff98e9d382,
     type: 2}
   m_PrefabInternal: {fileID: 589528383}
---- !u!114 &500219856
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 500219855}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a553980902774c4d9df63e119f55186, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  camTransform: {fileID: 0}
-  shakeDuration: 0
-  shakeAmount: 0.3
-  decreaseFactor: 1
 --- !u!1001 &589528383
 Prefab:
   m_ObjectHideFlags: 0
