@@ -223,7 +223,6 @@ GameObject:
   - 212: {fileID: 212000012782897868}
   - 50: {fileID: 50000010772460452}
   - 114: {fileID: 114000013747485524}
-  - 114: {fileID: 114000014291491752}
   - 60: {fileID: 60000014213178080}
   - 61: {fileID: 61000013903406578}
   - 114: {fileID: 114000011153849304}
@@ -364,7 +363,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000013899720524}
   - 212: {fileID: 212000012321649364}
-  - 114: {fileID: 114000011897432812}
   - 114: {fileID: 114000014143216780}
   - 114: {fileID: 114000010925871418}
   m_Layer: 8
@@ -761,7 +759,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013601845164}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6, y: -3, z: 0}
+  m_LocalPosition: {x: 9.66, y: -3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -1606,6 +1604,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b42a1d1a03e998e46a0567d6e51cffab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  explosionAnim: {fileID: 1000013558715282, guid: 7e15ba29fb127c34dba96a0b1b9156d0,
+    type: 2}
   startingVelocity: {x: 0, y: 0}
   gameObj: {fileID: 1000013142665580}
 --- !u!114 &114000010506971592
@@ -1633,6 +1633,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b42a1d1a03e998e46a0567d6e51cffab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  explosionAnim: {fileID: 1000013558715282, guid: 7e15ba29fb127c34dba96a0b1b9156d0,
+    type: 2}
   startingVelocity: {x: 0, y: 0}
   gameObj: {fileID: 1000010114156720}
 --- !u!114 &114000010602156510
@@ -1702,6 +1704,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b42a1d1a03e998e46a0567d6e51cffab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  explosionAnim: {fileID: 1000013558715282, guid: 7e15ba29fb127c34dba96a0b1b9156d0,
+    type: 2}
   startingVelocity: {x: 0, y: 0}
   gameObj: {fileID: 1000010524824216}
 --- !u!114 &114000010906314504
@@ -1769,9 +1773,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68c5beb586df320439b0c0e4fba4c6ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 1
+  hp: 10
   deathSprite: {fileID: 21300004, guid: 050e31934775066488f25950080c0ae1, type: 3}
   camera: {fileID: 0}
+  numberOfFlicker: 5
+  timeOnFlicker: 0.05
+  timeOffFlicker: 0.05
 --- !u!114 &114000011202960980
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1811,6 +1818,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b42a1d1a03e998e46a0567d6e51cffab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  explosionAnim: {fileID: 1000013558715282, guid: 7e15ba29fb127c34dba96a0b1b9156d0,
+    type: 2}
   startingVelocity: {x: 0, y: 0}
   gameObj: {fileID: 1000012178764976}
 --- !u!114 &114000011311367992
@@ -1838,6 +1847,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b42a1d1a03e998e46a0567d6e51cffab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  explosionAnim: {fileID: 1000013558715282, guid: 7e15ba29fb127c34dba96a0b1b9156d0,
+    type: 2}
   startingVelocity: {x: 0, y: 0}
   gameObj: {fileID: 1000013902175104}
 --- !u!114 &114000011530523372
@@ -1851,6 +1862,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b42a1d1a03e998e46a0567d6e51cffab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  explosionAnim: {fileID: 1000013558715282, guid: 7e15ba29fb127c34dba96a0b1b9156d0,
+    type: 2}
   startingVelocity: {x: 0, y: 0}
   gameObj: {fileID: 1000011738052466}
 --- !u!114 &114000011560802766
@@ -1864,6 +1877,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b42a1d1a03e998e46a0567d6e51cffab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  explosionAnim: {fileID: 1000013558715282, guid: 7e15ba29fb127c34dba96a0b1b9156d0,
+    type: 2}
   startingVelocity: {x: 0, y: 0}
   gameObj: {fileID: 1000010294575612}
 --- !u!114 &114000011564257750
@@ -1891,6 +1906,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b42a1d1a03e998e46a0567d6e51cffab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  explosionAnim: {fileID: 1000013558715282, guid: 7e15ba29fb127c34dba96a0b1b9156d0,
+    type: 2}
   startingVelocity: {x: 0, y: 0}
   gameObj: {fileID: 1000010891578102}
 --- !u!114 &114000011820674332
@@ -1904,20 +1921,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68c5beb586df320439b0c0e4fba4c6ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 1
+  hp: 5
   deathSprite: {fileID: 21300004, guid: 050e31934775066488f25950080c0ae1, type: 3}
   camera: {fileID: 0}
---- !u!114 &114000011897432812
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000013601845164}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c1ccadc5202770f4ebf5f207f894969d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  numberOfFlicker: 5
+  timeOnFlicker: 0.05
+  timeOffFlicker: 0.05
 --- !u!114 &114000011951278194
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1943,6 +1952,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b42a1d1a03e998e46a0567d6e51cffab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  explosionAnim: {fileID: 1000013558715282, guid: 7e15ba29fb127c34dba96a0b1b9156d0,
+    type: 2}
   startingVelocity: {x: 0, y: 0}
   gameObj: {fileID: 1000013495544414}
 --- !u!114 &114000012132911346
@@ -1956,6 +1967,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b42a1d1a03e998e46a0567d6e51cffab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  explosionAnim: {fileID: 1000013558715282, guid: 7e15ba29fb127c34dba96a0b1b9156d0,
+    type: 2}
   startingVelocity: {x: 0, y: 0}
   gameObj: {fileID: 1000013897263700}
 --- !u!114 &114000012155935408
@@ -1969,6 +1982,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b42a1d1a03e998e46a0567d6e51cffab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  explosionAnim: {fileID: 1000013558715282, guid: 7e15ba29fb127c34dba96a0b1b9156d0,
+    type: 2}
   startingVelocity: {x: 0, y: 0}
   gameObj: {fileID: 1000014143442120}
 --- !u!114 &114000012184314126
@@ -1982,6 +1997,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b42a1d1a03e998e46a0567d6e51cffab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  explosionAnim: {fileID: 1000013558715282, guid: 7e15ba29fb127c34dba96a0b1b9156d0,
+    type: 2}
   startingVelocity: {x: 0, y: 0}
   gameObj: {fileID: 1000013827746404}
 --- !u!114 &114000012192726322
@@ -2051,6 +2068,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b42a1d1a03e998e46a0567d6e51cffab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  explosionAnim: {fileID: 1000013558715282, guid: 7e15ba29fb127c34dba96a0b1b9156d0,
+    type: 2}
   startingVelocity: {x: 0, y: 0}
   gameObj: {fileID: 1000014266104094}
 --- !u!114 &114000012583535412
@@ -2064,6 +2083,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b42a1d1a03e998e46a0567d6e51cffab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  explosionAnim: {fileID: 1000013558715282, guid: 7e15ba29fb127c34dba96a0b1b9156d0,
+    type: 2}
   startingVelocity: {x: 0, y: 0}
   gameObj: {fileID: 1000010259264682}
 --- !u!114 &114000012623444954
@@ -2091,6 +2112,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b42a1d1a03e998e46a0567d6e51cffab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  explosionAnim: {fileID: 1000013558715282, guid: 7e15ba29fb127c34dba96a0b1b9156d0,
+    type: 2}
   startingVelocity: {x: 0, y: 0}
   gameObj: {fileID: 1000011929599312}
 --- !u!114 &114000012987254158
@@ -2146,6 +2169,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b42a1d1a03e998e46a0567d6e51cffab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  explosionAnim: {fileID: 1000013558715282, guid: 7e15ba29fb127c34dba96a0b1b9156d0,
+    type: 2}
   startingVelocity: {x: 0, y: 0}
   gameObj: {fileID: 1000013007178212}
 --- !u!114 &114000013573308654
@@ -2159,6 +2184,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b42a1d1a03e998e46a0567d6e51cffab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  explosionAnim: {fileID: 1000013558715282, guid: 7e15ba29fb127c34dba96a0b1b9156d0,
+    type: 2}
   startingVelocity: {x: 0, y: 0}
   gameObj: {fileID: 1000012813693552}
 --- !u!114 &114000013607050102
@@ -2172,6 +2199,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b42a1d1a03e998e46a0567d6e51cffab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  explosionAnim: {fileID: 1000013558715282, guid: 7e15ba29fb127c34dba96a0b1b9156d0,
+    type: 2}
   startingVelocity: {x: 0, y: 0}
   gameObj: {fileID: 1000012334355744}
 --- !u!114 &114000013716087884
@@ -2199,6 +2228,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b42a1d1a03e998e46a0567d6e51cffab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  explosionAnim: {fileID: 1000013558715282, guid: 7e15ba29fb127c34dba96a0b1b9156d0,
+    type: 2}
   startingVelocity: {x: 0, y: 0}
   gameObj: {fileID: 1000010753619836}
 --- !u!114 &114000013747485524
@@ -2212,6 +2243,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06ad39814c035c248938d55a3779f05e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  explosionAnim: {fileID: 1000013558715282, guid: 7e15ba29fb127c34dba96a0b1b9156d0,
+    type: 2}
   rotSpeed: 0.2
   rotAngle: 0
   numMoves: 8
@@ -2226,6 +2259,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b42a1d1a03e998e46a0567d6e51cffab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  explosionAnim: {fileID: 1000013558715282, guid: 7e15ba29fb127c34dba96a0b1b9156d0,
+    type: 2}
   startingVelocity: {x: 0, y: 0}
   gameObj: {fileID: 1000010290974210}
 --- !u!114 &114000014143216780
@@ -2240,6 +2275,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 1
+  sound: {fileID: 0}
 --- !u!114 &114000014214606768
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2251,6 +2287,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b42a1d1a03e998e46a0567d6e51cffab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  explosionAnim: {fileID: 1000013558715282, guid: 7e15ba29fb127c34dba96a0b1b9156d0,
+    type: 2}
   startingVelocity: {x: 0, y: 0}
   gameObj: {fileID: 1000010039487376}
 --- !u!114 &114000014248254752
@@ -2264,19 +2302,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b42a1d1a03e998e46a0567d6e51cffab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  explosionAnim: {fileID: 1000013558715282, guid: 7e15ba29fb127c34dba96a0b1b9156d0,
+    type: 2}
   startingVelocity: {x: 0, y: 0}
   gameObj: {fileID: 1000010016453880}
---- !u!114 &114000014291491752
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000011929599312}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c1ccadc5202770f4ebf5f207f894969d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &212000010247573036
 SpriteRenderer:
   m_ObjectHideFlags: 1

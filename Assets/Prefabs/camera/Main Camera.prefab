@@ -258,7 +258,8 @@ MonoBehaviour:
   ifOn: 1
   margin_left: 0.5
   margin_right: 0.5
-  margin_height: 0.5
+  margin_height_lower: 0
+  margin_height_upper: 0
   lowerbound_mag: 2
   upperboud_mag: 4
   lowerbound_angle: 30

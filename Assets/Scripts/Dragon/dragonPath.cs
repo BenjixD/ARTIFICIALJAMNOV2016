@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class dragonPath : MonoBehaviour {
+	public GameObject explosionAnim;	//Animation for explosion
+
 	public class path_entry{
 		public float duration;
 		public Vector2 velocity;
@@ -94,11 +96,16 @@ public class dragonPath : MonoBehaviour {
 
 	IEnumerator explosion(Vector2 pos){
 		float interval = 0.1f;
-		for (float i = 3f; i >= 0f; i -= interval) {
+		for (float i = 2f; i >= 0f; i -= interval) {
 			float ifDo = Random.Range (1f, 100f);
 			if (ifDo <= 15) {
 				Vector2 setExplosion = new Vector2 (pos.x + Random.Range (-0.5f, 0.5f), pos.y + Random.Range (-0.5f, 0.5f));
-				Debug.Log ("Explosion at: " + setExplosion);
+				//Debug.Log ("Explosion at: " + setExplosion);
+
+				//spawn an explosion as a child of this!
+				GameObject child = (GameObject) Instantiate(explosionAnim, setExplosion, Quaternion.identity);
+				child.transform.parent = transform;
+				Destroy(child, child.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length);
 			}
 			yield return new WaitForSeconds(interval);
 		}
