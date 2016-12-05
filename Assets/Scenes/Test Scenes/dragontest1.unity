@@ -184,6 +184,16 @@ Prefab:
       propertyPath: spawningProbability
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114000011174957402, guid: 4e21a4565bd959a49b2281ff98e9d382,
+        type: 2}
+      propertyPath: cameraSpeedModifier
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011174957402, guid: 4e21a4565bd959a49b2281ff98e9d382,
+        type: 2}
+      propertyPath: viewMargin
+      value: 0.25
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4e21a4565bd959a49b2281ff98e9d382, type: 2}
   m_IsPrefabParent: 0
