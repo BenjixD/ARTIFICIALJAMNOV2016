@@ -9,7 +9,8 @@ public class meteorShower : MonoBehaviour {
 	//Spawn Boundaries
 	public float margin_left;
 	public float margin_right;
-	public float margin_height;
+	public float margin_height_lower;
+	public float margin_height_upper;
 	//Magnatude Boundaries
 	public float lowerbound_mag;
 	public float upperboud_mag;
@@ -30,8 +31,8 @@ public class meteorShower : MonoBehaviour {
 		if(ifSpawning < spawningProbability && ifOn){
 			float left = cam.ScreenToWorldPoint(new Vector2(0, 0)).x - margin_left;
 			float right = cam.ScreenToWorldPoint (new Vector2(cam.pixelWidth, 0)).x + margin_right;
-			float lowerHeight = cam.ScreenToWorldPoint (new Vector2(0, cam.pixelHeight)).y;
-			float upperHeight = cam.ScreenToWorldPoint (new Vector2(0, cam.pixelHeight)).y + margin_height;
+			float lowerHeight = cam.ScreenToWorldPoint (new Vector2(0, cam.pixelHeight)).y + margin_height_lower;
+			float upperHeight = cam.ScreenToWorldPoint (new Vector2(0, cam.pixelHeight)).y + margin_height_upper;
 
 			//Spawn Point of the meteor
 			Vector2 spawnPoint = new Vector2 (Random.Range(left, right), Random.Range(lowerHeight, upperHeight));

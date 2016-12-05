@@ -10,14 +10,17 @@ public class meteorSoundScript : MonoBehaviour {
     AudioSource sounds;
     public float meteorExpVol = 0.2f;
 
+	void Awake(){
+		sounds = GetComponentInChildren<AudioSource>();
+		soundController = GameObject.Find("SoundController");
+		soundscript = soundController.GetComponent<soundEffectScript>();
+
+		meteorExplosion = soundscript.meteorExplosion;
+	}
+
     void Start()
     {
-        sounds = GetComponentInChildren<AudioSource>();
-
-        soundController = GameObject.Find("SoundController");
-        soundscript = soundController.GetComponent<soundEffectScript>();
-
-        meteorExplosion = soundscript.meteorExplosion;
+       
     }
 
     public void playMeteorExp()

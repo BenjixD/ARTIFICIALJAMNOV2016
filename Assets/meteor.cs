@@ -27,7 +27,6 @@ public class meteor : MonoBehaviour {
             fx.playMeteorExp();
             Destroy (gameObject.GetComponent<CircleCollider2D>());
 			anim.SetTrigger ("destroy");
-			Destroy (gameObject.GetComponent<CircleCollider2D>());
 			Destroy (gameObject, anim.GetCurrentAnimatorStateInfo(0).length);
 			//Set Velocity to be 0
 			GetComponent<Rigidbody2D>().velocity = Vector2.zero	;

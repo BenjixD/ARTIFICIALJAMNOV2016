@@ -45,6 +45,8 @@ public class playerStats : MonoBehaviour {
         }
     }
 
+
+
     void setRegenTrue()
     {
         canRegen = true;
