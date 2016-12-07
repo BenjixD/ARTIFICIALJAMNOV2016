@@ -61,6 +61,7 @@ public class playerStats : MonoBehaviour {
         }
         else if (playerLife == 1 && canTakeDamage)
         {
+			playerLife -= 1;
             canTakeDamage = false;
             StartCoroutine(killPlayer(4f));
         }

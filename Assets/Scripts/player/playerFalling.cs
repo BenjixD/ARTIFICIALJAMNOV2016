@@ -14,7 +14,8 @@ public class playerFalling : MonoBehaviour {
 
 	void Start(){
 		rb = GetComponent<Rigidbody2D> ();
-		cam = screen.GetComponent<cameraBehaviour> ();
+		cam = screen.GetComponent<cameraBehaviour>();
+		StartCoroutine (disableScript());
 	}
 
 	void OnTriggerEnter2D(Collider2D other){
@@ -60,6 +61,15 @@ public class playerFalling : MonoBehaviour {
 		GetComponent<playerController> ().ifOn = true;
 		GetComponent<BoxCollider2D>().enabled = true;
 		GetComponent<CircleCollider2D>().enabled = true;
+		yield return null;
+	}
+
+	IEnumerator disableScript(){
+		while (reference != null) {
+			yield return new WaitForFixedUpdate ();
+		}
+
+		this.enabled = false;
 		yield return null;
 	}
 }

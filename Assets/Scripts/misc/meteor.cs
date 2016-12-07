@@ -8,10 +8,13 @@ public class meteor : MonoBehaviour {
 	private Animator anim;
 	private bool touched = false;
 	// Use this for initialization
+	void Awake(){
+		fx = this.gameObject.GetComponent<meteorSoundScript>();
+	}
+
 	void Start () {
 		StartCoroutine(destroyObjectIfNotAlready());
-
-        fx = this.gameObject.GetComponent<meteorSoundScript>();
+		StartCoroutine (delayEnableTrigger ());
 	}
 	
 	// Update is called once per frame
@@ -35,7 +38,7 @@ public class meteor : MonoBehaviour {
                 if (!(child.gameObject.name == "Meteor AudioSource"))
 				GameObject.Destroy (child.gameObject);
 			}
-            //this.enabled = false;
+            this.enabled = false;
 		}
 	}
 
@@ -49,4 +52,16 @@ public class meteor : MonoBehaviour {
         fx.playMeteorExp();
         yield return null;
     }
+
+	IEnumerator delayEnableTrigger(){
+		//Freeze Velocity
+		Vector2 oldVelocity = GetComponent<Rigidbody2D> ().velocity; 
+		GetComponent<Rigidbody2D> ().velocity = Vector2.zero;
+		GetComponent<CircleCollider2D> ().enabled = false;
+
+		yield return new WaitForSeconds (1f);
+
+		GetComponent<Rigidbody2D> ().velocity = oldVelocity;
+		GetComponent<CircleCollider2D> ().enabled = true;
+	}
 }

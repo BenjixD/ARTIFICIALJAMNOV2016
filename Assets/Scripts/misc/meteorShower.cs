@@ -23,6 +23,7 @@ public class meteorShower : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		cam = GetComponent<Camera>();
+		StartCoroutine (disableScript());
 	}
 	
 	// Update is called once per frame
@@ -50,5 +51,14 @@ public class meteorShower : MonoBehaviour {
 			spawn.transform.rotation = Quaternion.Euler (0, 0, rotateAngle);
 			//spawn.GetComponent<Rigidbody2D>().AddTorque(torque);
 		}
+	}
+
+	IEnumerator disableScript(){
+		while (player != null) {
+			yield return new WaitForFixedUpdate ();
+		}
+
+		this.enabled = false;
+		yield return null;
 	}
 }

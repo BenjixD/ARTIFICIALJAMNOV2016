@@ -12,7 +12,6 @@ public class dragon : MonoBehaviour {
 	void Start () {
 		children = GetComponentsInChildren<weakSpot>();
 		hp = children.Length;
-		Debug.Log (children.Length);
 	}
 	
 	// Update is called once per frame
