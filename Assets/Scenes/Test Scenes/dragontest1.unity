@@ -496,29 +496,6 @@ Prefab:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 500219857}
-    - target: {fileID: 114000010196312444, guid: f1a1df6b66e66c04c97371bb214e5df9,
-        type: 2}
-      propertyPath: lifeUI
-      value: 
-      objectReference: {fileID: 1000011756370420, guid: 76c360340221e524faa71a92ee81daeb,
-        type: 2}
-    - target: {fileID: 114000010196312444, guid: f1a1df6b66e66c04c97371bb214e5df9,
-        type: 2}
-      propertyPath: spawnOffset
-      value: -40
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000010196312444, guid: f1a1df6b66e66c04c97371bb214e5df9,
-        type: 2}
-      propertyPath: emptySprite
-      value: 
-      objectReference: {fileID: 21300006, guid: 21a8e6f58b6a0954ba4935f27296cfa7,
-        type: 3}
-    - target: {fileID: 114000010196312444, guid: f1a1df6b66e66c04c97371bb214e5df9,
-        type: 2}
-      propertyPath: fullSprite
-      value: 
-      objectReference: {fileID: 21300004, guid: 21a8e6f58b6a0954ba4935f27296cfa7,
-        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f1a1df6b66e66c04c97371bb214e5df9, type: 2}
   m_IsPrefabParent: 0

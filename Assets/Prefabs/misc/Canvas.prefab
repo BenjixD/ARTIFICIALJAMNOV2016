@@ -126,8 +126,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  lifeUI: {fileID: 0}
-  spawnOffset: 0
+  lifeUI: {fileID: 1000011756370420, guid: 76c360340221e524faa71a92ee81daeb, type: 2}
+  spawnOffset: -40
+  fullSprite: {fileID: 21300004, guid: 21a8e6f58b6a0954ba4935f27296cfa7, type: 3}
+  emptySprite: {fileID: 21300006, guid: 21a8e6f58b6a0954ba4935f27296cfa7, type: 3}
 --- !u!114 &114000010264009442
 MonoBehaviour:
   m_ObjectHideFlags: 1
